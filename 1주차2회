@@ -1,0 +1,18 @@
+import sys
+n, k = map(int, sys.stdin.readline().split())
+
+queue = []
+result = []
+
+for num in range(n):
+    queue.append(num+1)
+
+while queue != []:
+    for _ in range(k-1):
+        queue.append(queue.pop(0))
+    result.append(queue[0])
+
+    queue.pop(0)
+
+result_string = ", ".join(map(str, result))
+print('<' + result_string + '>')
