@@ -1,0 +1,15 @@
+import sys
+
+num_of_testcase = int(sys.stdin.readline())
+
+word = sys.stdin.readline().split()
+
+
+for _ in range(num_of_testcase):
+    for i in range(len(word)):
+        flipped_word = []    
+        flipped_sentence = []
+        for flip in reversed(range(len(word))):
+            stack = []
+            flipped_sentence.append(word[flip]) 
+    print (flipped_sentence)
